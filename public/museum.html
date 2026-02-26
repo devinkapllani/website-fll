@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digital Museum - RRAKETA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="logo-left">RRAKETA 🚀</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="museum.html" class="active">Digital Museum</a>
+    <a href="missions.html">Missions</a>
+    <a href="references.html">References</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<canvas id="galaxy"></canvas>
+
+<section class="museum-section">
+  <h1 class="museum-title">Digital Museum</h1>
+  <div id="artifactGallery" class="artifact-grid"></div>
+</section>
+
+<!-- MODAL -->
+<div id="artifactModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+
+    <div class="modal-body">
+      <img id="modalImage">
+
+      <div class="modal-info">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <p id="modalAge"></p>
+
+        <button class="reconstruct-btn" onclick="restoreAI()">
+          🔥 Reconstruct with AI
+        </button>
+        <button class="reconstruct-btn" onclick="detectAgeAI()">
+          🕰 Detect Age with AI
+        </button>
+      
+        <button class="reconstruct-btn" onclick="generate3DAI()">
+          🧊 Generate 3D Model
+        </button>
+
+        <div id="aiResult"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
